@@ -4,7 +4,7 @@ Goals:
     Initial Use
     -Allow user to determine their basal metabolic rate
     -Determine calorie needs based off of Mifflin - St. Jeor Formula
-    -Allow user to select weight loss option (maintain, fat loss, extreme fat loss)
+    -Allow user to select weight loss option (maintain, standard fat loss, extreme fat loss)
     -Set weight loss goal
 
     Long Term
