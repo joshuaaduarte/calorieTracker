@@ -2,7 +2,7 @@
 
 *The aim of this project is to create a caloric tracker that can take in a users  
 caloric intake on a daily basis. Ultimately, this tool will be used to ensure  
-accountability and weight loss*
+accountability and weight loss.*
 
 ## **Goals**
 ___
