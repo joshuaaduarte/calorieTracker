@@ -1,15 +1,28 @@
+# imports 
+import csv #used to manipulate csv files
+import os.path # used to check if files exist 
 # gather initial user information
-
 
 # Conversions
 lbToKg = 0.45359237
 inToCm = 2.54
 kgToCal = 7700
 
-done = False
+# ask user to input their first and last name
+firstName = input('Enter first name: ')
+lastName = input('Enter last name: ')
+
+# check if previous csv file exists
+if os.path.exists('{}_{}.csv'.format(firstName.lower(), lastName.lower())) == True:
+    done = True
+    goals = True
+else:
+    done = False
+    goals = False
+
+# asks user for data if csv does not exist
 while not done:
-    firstName = input('Enter first name: ')
-    lastName = input('Enter last name: ')
+
     age = int(input('Enter Age: '))
     gender = input('Enter gender (M/F): ')
     units = input("Do you use kg or lbs? ")
@@ -36,8 +49,6 @@ while not done:
         done = False
 
 # Set goals
-goals = False
-
 while not goals:
     goalLoss = input("Do you wish to maintain weight, lose fat, lose extreme amount of fat (M/L/E): ")
     if goalLoss.lower() == 'm':
@@ -63,3 +74,15 @@ while not goals:
             print('You can get to ', goalWeight / lbToKg, 'pounds in ', weeksToGo, 'weeks at ', dailyCalorieIntake,
                   'calories per day!')
     goals = True
+
+
+# store information within a csv file 
+# create csv file 
+if os.path.exists('{}_{}.csv'.format(firstName.lower(), lastName.lower())) == False:
+    header = ['First Name', ' Last Name', 'Gender','Age', 'Height', 'Weight', 'BMR', 'Goal Weight','Daily Caloric Intake', 'Preferred Units']
+    data = [firstName, lastName, gender, age, height, weight, bmr, goalWeight, dailyCalorieIntake, units]
+    with open('{}_{}.csv'.format(firstName, lastName), 'w', newline='') as file:
+        writer = csv.writer(file)
+        writer.writerow(header)
+        writer.writerow(data)
+
