@@ -4,8 +4,8 @@
 caloric intake on a daily basis. Ultimately, this tool will be used to ensure  
 accountability and weight loss.*
 
-## **Goals**
-___
+## **Goals**  
+
 ### Initial Use
 * Allow user to determine their basal matabolic rate
 * Detemine calorie needs based off of Mifflin - St. Jeor Formula

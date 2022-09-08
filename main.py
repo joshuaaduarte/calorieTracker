@@ -48,7 +48,7 @@ while not done:
     else:
         done = False
 
-# Set goals
+# Set goals if csv does not exist
 while not goals:
     goalLoss = input("Do you wish to maintain weight, lose fat, lose extreme amount of fat (M/L/E): ")
     if goalLoss.lower() == 'm':
